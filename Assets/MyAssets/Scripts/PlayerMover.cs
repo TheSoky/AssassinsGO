@@ -12,40 +12,58 @@ public class PlayerMover : MonoBehaviour
 	public float moveSpeed = 1.5f;
 	public float iTweenDelay = 0.0f;
 
-	private void Start()
-	{
+	private Board m_board;
 
+	private void Awake()
+	{
+		m_board = Object.FindObjectOfType<Board>().GetComponent<Board>();
 	}
 
+	private void Start()
+	{
+		UpdateBoard();
 
+		if(m_board != null && m_board.PlayerNode != null)
+		{
+			m_board.PlayerNode.InitNode();
+		}
+	}
 
 	public void MoveLeft()
 	{
-		Vector3 newPosition = transform.position + new Vector3(-2.0f, 0.0f, 0.0f);
+		Vector3 newPosition = transform.position + new Vector3(-Board.spacing, 0.0f, 0.0f);
 		Move(newPosition, 0.0f);
 	}
 
 	public void MoveRight()
 	{
-		Vector3 newPosition = transform.position + new Vector3(2.0f, 0.0f, 0.0f);
+		Vector3 newPosition = transform.position + new Vector3(Board.spacing, 0.0f, 0.0f);
 		Move(newPosition, 0.0f);
 	}
 
 	public void MoveForward()
 	{
-		Vector3 newPosition = transform.position + new Vector3(0.0f, 0.0f, 2.0f);
+		Vector3 newPosition = transform.position + new Vector3(0.0f, 0.0f, Board.spacing);
 		Move(newPosition, 0.0f);
 	}
 
 	public void MoveBackward()
 	{
-		Vector3 newPosition = transform.position + new Vector3(0.0f, 0.0f, -2.0f);
+		Vector3 newPosition = transform.position + new Vector3(0.0f, 0.0f, -Board.spacing);
 		Move(newPosition, 0.0f);
 	}
 
 	public void Move(Vector3 destinationPos, float delayTime = 0.25f)
 	{
-		StartCoroutine(MoveRoutine(destinationPos, delayTime));
+		if(m_board != null)
+		{
+			Node targetNode = m_board.FindNodeAt(destinationPos);
+
+			if(targetNode != null && m_board.PlayerNode.LinkedNodes.Contains(targetNode))
+			{
+				StartCoroutine(MoveRoutine(destinationPos, delayTime));
+			}
+		}
 	}
 
 	private IEnumerator MoveRoutine(Vector3 destinationPos, float delayTime)
@@ -71,8 +89,16 @@ public class PlayerMover : MonoBehaviour
 		iTween.Stop(gameObject);
 		transform.position = destinationPos;
 		isMoving = false;
+
+		UpdateBoard();
 	}
 
-
+	private void UpdateBoard()
+	{
+		if(m_board != null)
+		{
+			m_board.UpdatePlayerNode();
+		}
+	}
 
 }
