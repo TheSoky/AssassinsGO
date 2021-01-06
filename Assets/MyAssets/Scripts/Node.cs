@@ -17,6 +17,8 @@ public class Node : MonoBehaviour
 
 	public LayerMask obstacleLayer;
 
+	public bool isLevelGoal = false;
+
 	private Vector2 m_coordinate;
 	public Vector2 Coordinate { get { return Utility.Vector2Round(m_coordinate); } }
 
