@@ -70,7 +70,7 @@ public class Node : MonoBehaviour
 
 		foreach (Vector2 dir in Board.directions)
 		{
-			Node foundNeighbour = nodes.Find(n => n.Coordinate == Coordinate + dir);
+			Node foundNeighbour = FindNeighbourAt(nodes, dir);
 			if(foundNeighbour != null && !nList.Contains(foundNeighbour))
 			{
 				nList.Add(foundNeighbour);
@@ -78,6 +78,16 @@ public class Node : MonoBehaviour
 		}
 
 		return nList;
+	}
+
+	public Node FindNeighbourAt(List<Node> nodes, Vector2 dir)
+	{
+		return nodes.Find(n => n.Coordinate == Coordinate + dir);
+	}
+
+	public Node FindNeighbourAt(Vector2 dir)
+	{
+		return FindNeighbourAt(NeighborNodes, dir);
 	}
 
 	public void InitNode()

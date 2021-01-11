@@ -13,10 +13,12 @@ public class PlayerMover : MonoBehaviour
 	public float iTweenDelay = 0.0f;
 
 	private Board m_board;
+	private PlayerCompass m_playerCompass;
 
 	private void Awake()
 	{
 		m_board = Object.FindObjectOfType<Board>().GetComponent<Board>();
+		m_playerCompass = Object.FindObjectOfType<PlayerCompass>().GetComponent<PlayerCompass>();
 	}
 
 	private void Start()
@@ -63,6 +65,11 @@ public class PlayerMover : MonoBehaviour
 
 	private IEnumerator MoveRoutine(Vector3 destinationPos, float delayTime)
 	{
+		if(m_playerCompass != null)
+		{
+			m_playerCompass.ShowArrows(false);
+		}
+
 		isMoving = true;
 		destination = destinationPos;
 		yield return new WaitForSeconds(delayTime);
@@ -86,6 +93,11 @@ public class PlayerMover : MonoBehaviour
 		isMoving = false;
 
 		UpdateBoard();
+
+		if(m_playerCompass != null)
+		{
+			m_playerCompass.ShowArrows(true);
+		}
 	}
 
 	private void UpdateBoard()

@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: b588b4f83c2167e4cb3e88230b804e04
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asphaltMat
+    second: {fileID: 2100000, guid: 6a8154fccdf529c46b93d552cb2f5e8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chairCushionMat
+    second: {fileID: 2100000, guid: e35efa1ea532b0d4cb06171335a87614, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chairFrameMat
+    second: {fileID: 2100000, guid: 5b7bb54bf5a2944418af85b6717392d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: columnMat
+    second: {fileID: 2100000, guid: b5e1d326d43b3cc4e9790e720c5cef3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: columnTopMat
+    second: {fileID: 2100000, guid: 76e85c62cdd745c47a77b62053a9fa8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: coverMat
+    second: {fileID: 2100000, guid: 930e0c47a1a8f194589f01de8c593cdf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cushionMat
+    second: {fileID: 2100000, guid: 40b7750e71bdacf4a8d438e12c9d8672, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deskMat
+    second: {fileID: 2100000, guid: 1e332069a3700e84f8fc8f802f9d37c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevatorDoorMat
+    second: {fileID: 2100000, guid: 65d5abf782ec0c14283ae7fc4c934551, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevatorPanelMat
+    second: {fileID: 2100000, guid: 99f016afd7a42184da442fea05381829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevatorShaftTrimMat
+    second: {fileID: 2100000, guid: 827b21408d82ed44dab23a5d6c9307d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floorMat
+    second: {fileID: 2100000, guid: dd76454e5efd05f4db4f716c1d90e18e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glassEdgeMat
+    second: {fileID: 2100000, guid: 93544c106e2bb674fbbe177591133bce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glassMat
+    second: {fileID: 2100000, guid: 11308bda48252d343959fb8d03c72a49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3fca3c221e5d98b4f84dc99d1d84b662, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lampFrameMat
+    second: {fileID: 2100000, guid: e0dc6bd9291914a4cb9cd394d69791a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lampGlowMat
+    second: {fileID: 2100000, guid: e84509bb927b5514fb05d29e066bbac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lowerColumnMat
+    second: {fileID: 2100000, guid: 8aebbebc98860774a85ea39f1f807d67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metalMat
+    second: {fileID: 2100000, guid: e66e074818754d540a08c201a922d983, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: moldingMat
+    second: {fileID: 2100000, guid: fafd025f9c62fcf43a1cf8326cde762b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: planterBed
+    second: {fileID: 2100000, guid: 6bc9f026bf54232439e5a2dccebab261, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: planterMat
+    second: {fileID: 2100000, guid: 00024d2f4e06f87468020128f0252b69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: receptionWallMat
+    second: {fileID: 2100000, guid: aa5183fa21e565b4a8a014418d822e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: screenMat
+    second: {fileID: 2100000, guid: 2846ff6460b35bf49a30d9608bac4d46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sofaFrameMat
+    second: {fileID: 2100000, guid: 22ff854e23c12b14ba3fbe18c689c68d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: supportMat
+    second: {fileID: 2100000, guid: 8bf687a979d923a4fac47ef26d4e2172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tableLegsMat
+    second: {fileID: 2100000, guid: cf3332714e9e4424d8891e02735685ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tableTopMat
+    second: {fileID: 2100000, guid: 73b5d6515817dcd40a1e2a07fc07436f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tvFrameMat
+    second: {fileID: 2100000, guid: a60d1b1fc899e34499b05f33ddfaf862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tvWallMat
+    second: {fileID: 2100000, guid: 3aa8c6b2098aee648b248ef24124d205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ventMat
+    second: {fileID: 2100000, guid: c6c9ad61ef4cdd6478477fb7b83568ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wallMat
+    second: {fileID: 2100000, guid: 21b65eed2724d2e4a9338c1cc873d682, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: woodMat
+    second: {fileID: 2100000, guid: 6a6fadbc6bc05f248bc94079be3b6e12, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 100
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
