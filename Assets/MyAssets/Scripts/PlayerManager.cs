@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerMover))]
 [RequireComponent(typeof(PlayerInput))]
-public class PlayerManager : MonoBehaviour
+[RequireComponent(typeof(PlayerDeath))]
+public class PlayerManager : TurnManager
 {
 
 	public PlayerMover playerMover;
 	public PlayerInput playerInput;
+	public UnityEvent deathEvent;
 
-	private void Awake()
+	private Board m_board;
+
+	protected override void Awake()
 	{
+		base.Awake();
 		playerMover = GetComponent<PlayerMover>();
 		playerInput = GetComponent<PlayerInput>();
+		m_board = Object.FindObjectOfType<Board>().GetComponent<Board>();
 		playerInput.InputEnabled = true;
 	}
 
 	private void Update()
     {
-        if(playerMover.isMoving)
+        if(playerMover.isMoving || m_gameManager.CurrentTurn != Turn.Player)
 		{
 			return;
 		}
@@ -50,5 +57,39 @@ public class PlayerManager : MonoBehaviour
 		}
 
     }
+
+	public void Die()
+	{
+		if(deathEvent != null)
+		{
+			deathEvent.Invoke();
+		}
+	}
+
+	public override void FinishTurn()
+	{
+		CaptureEnemies();
+		base.FinishTurn();
+	}
+
+	private void CaptureEnemies()
+	{
+		if(m_board != null)
+		{
+			List<EnemyManager> enemies = m_board.FindEnemiesAt(m_board.PlayerNode);
+
+			if(enemies.Count != 0)
+			{
+
+				foreach(EnemyManager enemy in enemies)
+				{
+					if(enemy != null)
+					{
+						enemy.Die();
+					}
+				}
+			}
+		}
+	}
 
 }
